@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>BiblioTech</title>
 </head>
-<body>
+<body class="bg-warm_ivory">
     <header class="bg-white border-b border-light_gray sticky top-0">
-        <nav class="relative mx-auto flex items-center justify-between px-4 py-4 border-light_gray bg-forest_green shadow-navbar font-heading text-white">
+        <nav class="relative mx-auto flex items-center justify-between px-4 py-4 border-light_gray bg-forest_green shadow-navbar font-heading text-white px-5">
             <div>
                 <div class="text-2xl">
                     <h1>
@@ -22,5 +22,64 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <section id="first-section"  class="grid grid-cols-1 mt-10 mb-7 mx-5 bg-light_blue rounded-xl shadow-form font-body">
+            <div class="mx-5 my-3">
+                <div class="mb-4">
+                    <div class="text-4xl text-forest_green font-heading">Ajouter un livre</div>
+                    <div class="text-sm text-gray">Ajoutez un livre à votre collection.</div>
+                </div>
+
+                <form id="form">
+                    <div class="grid grid-cols-1 md:flex justify-between">
+                        <div>
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="titre" class="text-heading text-charcoal mb-1">Titre *</label>
+                                <input type="text" name="titre" id="titre" placeholder="Ex : Dune" class="bg-white rounded-sm border-1 px-2 py-2" required>
+                            </div>
+
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="autheur" class="text-heading text-charcoal mb-1">Autheur *</label>
+                                <input type="text" name="autheur" id="autheur" placeholder="Ex : Frank Herbert" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="annee" class="text-heading text-charcoal mb-1">Année</label>
+                                <input type="number" name="annee" id="annee" placeholder="Ex : 1965" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                            </div>
+
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="genre" class="text-heading text-charcoal mb-1">Genre</label>
+                                <input type="text" name="genre" id="genre" placeholder="Ex : Science-fiction" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="statut" class="text-heading text-charcoal mb-1">Statut de lecture</label>
+                                <select name="statut" id="statut" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                                    <option value="hebdomadaire">To-read</option>
+                                    <option value="quinzaine">Reading</option>
+                                    <option value="mensuelle">Read</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-1 mb-3 md:mb-10">
+                                <label for="description" class="text-heading text-charcoal mb-1">Autheur *</label>
+                                <input type="text" name="description" id="description" placeholder="Ex : Une courte description..." class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="ajouter-livre-button" class="bg-green mb-1 text-white text-lg rounded-lg px-2 py-2 shadow-button">+ Ajouter le livre</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

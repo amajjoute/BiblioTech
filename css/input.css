@@ -4,19 +4,18 @@
 @import "tailwindcss";
 
 @theme {
-    --color-forest_green: #1F4D3D;
-    --color-green: #336E59;
-    --color-pale_sage: #E8EFE6;
-    --color-warm_ivory: #F8F7F2;
-    --color-white: #FFFFFF;
-    --color-charcoal: #292B27;
-    --color-gray: #636969;
-    --color-light_gray: #DCDCD4;
-    --color-light_blue: #E3EDFA;
-    --color-light_green: #E0EFDC;
-    --color-light_amber: #FCEED0;
-    --color-light_red: #FCE3E1;
-    --color-red: #B82E29;
+    --color-forest_green: #1F4D3D;      /* Navbar, primary dark green */
+    --color-green: #336E59;     /* Buttons, accents */
+    --color-warm_ivory: #F8F7F2;        /* Page background */
+    --color-white: #FFFFFF;     /* Inputs, cards */
+    --color-charcoal: #292B27;      /* Main text */
+    --color-gray: #636969;      /* Secondary text */
+    --color-light_gray: #DCDCD4;        /* Borders and dividers */
+    --color-light_blue: #E3EDFA;        /* “À lire” badge */
+    --color-light_green: #E0EFDC;       /* “Lu” badge */
+    --color-light_amber: #FCEED0;       /* “En cours” badge */
+    --color-light_red: #FCE3E1;     /* Delete button background */
+    --color-red: #B82E29;       /* Delete button text */
 
     --shadow-card: 0 2px 6px rgba(41, 43, 39, 0.05);
     --shadow-form: 0 2px 12px rgba(41, 43, 39, 0.04);
