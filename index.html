@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>BiblioTech</title>
 </head>
-<body>
+<body class="bg-warm_ivory">
     <header class="bg-white border-b border-light_gray sticky top-0">
-        <nav class="relative mx-auto flex items-center justify-between px-4 py-4 border-light_gray bg-forest_green shadow-navbar font-heading text-white">
+        <nav class="relative mx-auto flex items-center justify-between px-4 py-4 border-light_gray bg-forest_green shadow-navbar font-heading text-white px-5">
             <div>
                 <div class="text-2xl">
                     <h1>
@@ -22,5 +22,134 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <section id="first-section"  class="grid grid-cols-1 mt-10 mb-7 mx-5 bg-light_blue rounded-xl shadow-form font-body">
+            <div class="mx-5 my-3">
+                <div class="mb-4">
+                    <div class="text-4xl text-forest_green font-heading">Ajouter un livre</div>
+                    <div class="text-sm text-gray">Ajoutez un livre à votre collection.</div>
+                </div>
+
+                <form id="form">
+                    <div class="grid grid-cols-1 md:flex justify-between">
+                        <div>
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="titre" class="text-heading text-charcoal mb-1">Titre *</label>
+                                <input type="text" name="titre" id="titre" placeholder="Ex : Dune" class="bg-white rounded-sm border-1 px-2 py-2" required>
+                            </div>
+
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="autheur" class="text-heading text-charcoal mb-1">Autheur *</label>
+                                <input type="text" name="autheur" id="autheur" placeholder="Ex : Frank Herbert" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="annee" class="text-heading text-charcoal mb-1">Année</label>
+                                <input type="number" name="annee" id="annee" placeholder="Ex : 1965" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                            </div>
+
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="genre" class="text-heading text-charcoal mb-1">Genre</label>
+                                <input type="text" name="genre" id="genre" placeholder="Ex : Science-fiction" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="grid grid-cols-1 mb-3">
+                                <label for="statut" class="text-heading text-charcoal mb-1">Statut de lecture</label>
+                                <select name="statut" id="statut" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                                    <option value="hebdomadaire">To-read</option>
+                                    <option value="quinzaine">Reading</option>
+                                    <option value="mensuelle">Read</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-1 mb-3 md:mb-10">
+                                <label for="description" class="text-heading text-charcoal mb-1">Autheur *</label>
+                                <input type="text" name="description" id="description" placeholder="Ex : Une courte description..." class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="ajouter-livre-button" class="bg-green mb-1 text-white text-lg rounded-lg px-2 py-2 shadow-button">+ Ajouter le livre</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="second-section" class="mx-4 mb-10 font-body text-charcoal md:mx-12">
+            <div class="mb-5 grid grid-cols-1 gap-4 md:flex md:items-center md:justify-between">
+                <div>
+                    <h2 class="text-2xl font-heading text-charcoal">Ma collection</h2>
+                    <p class="text-sm text-gray">Recherchez, triez et gérez vos livres facilement.</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-3 md:flex md:items-center">
+                    <label for="search-input" class="sr-only">Rechercher un livre par titre ou auteur</label>
+                    <input type="search" id="search-input" name="search" placeholder="⌕  Rechercher un livre (titre ou auteur)..." class="w-full rounded-lg border border-light_gray bg-white px-3 py-3 text-sm text-charcoal placeholder:text-gray md:w-76">
+
+                    <div class="flex items-center gap-3">
+                        <label for="sort-select" class="whitespace-nowrap text-sm">↕ Trier par :</label>
+                        <select id="sort-select" name="sort" class="w-full rounded-lg border border-light_gray bg-white px-3 py-3 text-sm md:w-auto">
+                            <option value="title-asc">Titre (A → Z)</option>
+                            <option value="author-asc">Auteur (A → Z)</option>
+                            <option value="year-asc">Année (croissant)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden overflow-x-auto rounded-lg border border-light_gray bg-white md:block">
+                <table class="w-full min-w-[900px] border-collapse text-left text-sm">
+                    <thead class="bg-warm_ivory text-charcoal">
+                        <tr>
+                            <th scope="col" class="px-3 py-3 font-heading">Titre</th>
+                            <th scope="col" class="px-3 py-3 font-heading">Auteur</th>
+                            <th scope="col" class="px-3 py-3 font-heading">Année</th>
+                            <th scope="col" class="px-3 py-3 font-heading">Genre</th>
+                            <th scope="col" class="px-3 py-3 font-heading">Statut</th>
+                            <th scope="col" class="px-3 py-3 font-heading">Description</th>
+                            <th scope="col" class="px-3 py-3 font-heading">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="books-list" class="divide-y divide-light_gray"></tbody>
+                </table>
+            </div>
+
+            <div id="books-cards" class="grid grid-cols-1 gap-3 md:hidden"></div>
+
+            <template id="desktop-book-row-template">
+                <tr data-book-id="" class="bg-white">
+                    <th scope="row" data-field="title" class="px-3 py-4 font-body font-semibold"></th>
+                    <td data-field="author" class="px-3 py-4"></td>
+                    <td data-field="year" class="px-3 py-4"></td>
+                    <td data-field="genre" class="px-3 py-4"></td>
+                    <td class="px-3 py-4"><span data-field="status" class="inline-block rounded-lg px-2 py-1 text-xs"></span></td>
+                    <td data-field="description" class="px-3 py-4 text-gray"></td>
+                    <td class="whitespace-nowrap px-3 py-3">
+                        <button type="button" data-action="edit" class="mr-1 rounded-lg bg-light_green px-3 py-2 text-sm text-forest_green">✎ Modifier</button>
+                        <button type="button" data-action="delete" class="rounded-lg bg-light_red px-3 py-2 text-sm text-red">▤ Supprimer</button>
+                    </td>
+                </tr>
+            </template>
+
+            <template id="mobile-book-card-template">
+                <article data-book-id="" class="rounded-lg border border-light_gray bg-white p-4 shadow-card">
+                    <h3 data-field="title" class="mb-2 font-heading text-lg font-semibold text-charcoal"></h3>
+                    <p class="mb-2 text-sm text-gray"><span data-field="author"></span><span aria-hidden="true"> · </span><span data-field="year"></span></p>
+                    <p data-field="genre" class="mb-2 text-sm text-charcoal"></p>
+                    <p data-field="description" class="mb-3 text-sm text-gray"></p>
+                    <div class="flex gap-2">
+                        <button type="button" data-action="edit" class="rounded-lg bg-light_green px-3 py-2 text-sm text-forest_green">✎ Modifier</button>
+                        <button type="button" data-action="delete" class="rounded-lg bg-light_red px-3 py-2 text-sm text-red">▤ Supprimer</button>
+                    </div>
+                </article>
+            </template>
+        </section>
+    </main>
 </body>
 </html>
