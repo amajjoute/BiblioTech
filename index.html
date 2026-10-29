@@ -103,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="hidden overflow-x-auto rounded-lg border border-light_gray bg-white md:block">
+            <div class="overflow-x-auto rounded-lg border border-light_gray bg-white">
                 <table class="w-full min-w-[900px] border-collapse text-left text-sm">
                     <thead class="bg-warm_ivory text-charcoal">
                         <tr>
@@ -120,8 +120,6 @@
                 </table>
             </div>
 
-            <div id="books-cards" class="grid grid-cols-1 gap-3 md:hidden"></div>
-
             <template id="desktop-book-row-template">
                 <tr data-book-id="" class="bg-white">
                     <th scope="row" data-field="title" class="px-3 py-4 font-body font-semibold"></th>
@@ -137,18 +135,6 @@
                 </tr>
             </template>
 
-            <template id="mobile-book-card-template">
-                <article data-book-id="" class="rounded-lg border border-light_gray bg-white p-4 shadow-card">
-                    <h3 data-field="title" class="mb-2 font-heading text-lg font-semibold text-charcoal"></h3>
-                    <p class="mb-2 text-sm text-gray"><span data-field="author"></span><span aria-hidden="true"> · </span><span data-field="year"></span></p>
-                    <p data-field="genre" class="mb-2 text-sm text-charcoal"></p>
-                    <p data-field="description" class="mb-3 text-sm text-gray"></p>
-                    <div class="flex gap-2">
-                        <button type="button" data-action="edit" class="rounded-lg bg-light_green px-3 py-2 text-sm text-forest_green">✎ Modifier</button>
-                        <button type="button" data-action="delete" class="rounded-lg bg-light_red px-3 py-2 text-sm text-red">▤ Supprimer</button>
-                    </div>
-                </article>
-            </template>
         </section>
     </main>
 </body>
