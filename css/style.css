@@ -479,12 +479,6 @@
     .md\:mx-12 {
       margin-inline: calc(var(--spacing) * 12);
     }
-    .md\:mb-5 {
-      margin-bottom: calc(var(--spacing) * 5);
-    }
-    .md\:mb-7 {
-      margin-bottom: calc(var(--spacing) * 7);
-    }
     .md\:mb-10 {
       margin-bottom: calc(var(--spacing) * 10);
     }
@@ -503,32 +497,14 @@
     .md\:w-auto {
       width: auto;
     }
-    .md\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
     .md\:items-center {
       align-items: center;
     }
     .md\:justify-between {
       justify-content: space-between;
     }
-    .md\:px-10 {
-      padding-inline: calc(var(--spacing) * 10);
-    }
-    .md\:pr-10 {
-      padding-right: calc(var(--spacing) * 10);
-    }
-    .md\:pr-20 {
-      padding-right: calc(var(--spacing) * 20);
-    }
-    .md\:pr-50 {
-      padding-right: calc(var(--spacing) * 50);
-    }
     .md\:pr-60 {
       padding-right: calc(var(--spacing) * 60);
-    }
-    .md\:pr-100 {
-      padding-right: calc(var(--spacing) * 100);
     }
   }
 }
