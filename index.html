@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js" defer></script>
     <title>BiblioTech</title>
 </head>
 <body class="bg-warm_ivory">
@@ -18,7 +19,7 @@
                 <div class="text-sm text-light_gray">Gérez vos livres</div>
             </div>
             <div id="books-count" class="text-base">
-                 5 livres
+                 0 livres
             </div>
         </nav>
     </header>
@@ -68,7 +69,7 @@
                             </div>
 
                             <div class="grid grid-cols-1 mb-3 md:mb-10">
-                                <label for="description" class="text-heading text-charcoal mb-1">Autheur *</label>
+                                <label for="description" class="text-heading text-charcoal mb-1">Description</label>
                                 <input type="text" name="description" id="description" placeholder="Ex : Une courte description..." class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
                             </div>
                         </div>
@@ -120,7 +121,7 @@
                 </table>
             </div>
 
-            <template id="desktop-book-row-template">
+            <template id="desktop-mobile-book-row-template">
                 <tr data-book-id="" class="bg-white">
                     <th scope="row" data-field="title" class="px-3 py-4 font-body font-semibold"></th>
                     <td data-field="author" class="px-3 py-4"></td>
