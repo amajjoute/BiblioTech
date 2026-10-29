@@ -1,4 +1,3 @@
-//US-01
 const booksList = document.querySelector("#books-list");
 const rowTemplate = document.querySelector("#desktop-mobile-book-row-template");
 

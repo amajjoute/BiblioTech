@@ -1,4 +1,3 @@
-//US-01
 let books = [];
 
 function addBook(book) {

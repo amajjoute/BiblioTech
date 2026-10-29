@@ -1,7 +1,6 @@
 import { renderBooks } from "./ui.js";
 import { addBook, getBooks } from "./state.js";
 
-//US-01
 const form = document.querySelector("#form");
 
 form.addEventListener("submit", (event) => {
