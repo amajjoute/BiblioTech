@@ -62,9 +62,9 @@
                             <div class="grid grid-cols-1 mb-3">
                                 <label for="statut" class="text-heading text-charcoal mb-1">Statut de lecture</label>
                                 <select name="statut" id="statut" class="bg-white rounded-sm border-1 px-2 py-2 md:pr-60">
-                                    <option value="hebdomadaire">To-read</option>
-                                    <option value="quinzaine">Reading</option>
-                                    <option value="mensuelle">Read</option>
+                                    <option value="to-read">À lire</option>
+                                    <option value="reading">En cours</option>
+                                    <option value="read">Lu</option>
                                 </select>
                             </div>
 
@@ -90,17 +90,17 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-3 md:flex md:items-center">
-                    <label for="search-input" class="sr-only">Rechercher un livre par titre ou auteur</label>
-                    <input type="search" id="search-input" name="search" placeholder="⌕  Rechercher un livre (titre ou auteur)..." class="w-full rounded-lg border border-light_gray bg-white px-3 py-3 text-sm text-charcoal placeholder:text-gray md:w-76">
-
                     <div class="flex items-center gap-3">
-                        <label for="sort-select" class="whitespace-nowrap text-sm">↕ Trier par :</label>
-                        <select id="sort-select" name="sort" class="w-full rounded-lg border border-light_gray bg-white px-3 py-3 text-sm md:w-auto">
-                            <option value="title-asc">Titre (A → Z)</option>
-                            <option value="author-asc">Auteur (A → Z)</option>
-                            <option value="year-asc">Année (croissant)</option>
+                        <label for="search-field" class="whitespace-nowrap text-sm">Chercher dans :</label>
+                        <select id="search-field" name="search-field" class="w-full rounded-lg border border-light_gray bg-white px-3 py-3 text-sm md:w-auto">
+                            <option value="title">Titre</option>
+                            <option value="author">Auteur</option>
+                            <option value="year">Année</option>
                         </select>
                     </div>
+
+                    <label for="search-input" class="sr-only">Rechercher un livre</label>
+                    <input type="search" id="search-input" name="search" placeholder="⌕  Rechercher un livre..." class="w-full rounded-lg border border-light_gray bg-white px-3 py-3 text-sm text-charcoal placeholder:text-gray md:w-76">
                 </div>
             </div>
 
