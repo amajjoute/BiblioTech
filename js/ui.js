@@ -1,5 +1,7 @@
 const booksList = document.querySelector("#books-list");
 const rowTemplate = document.querySelector("#desktop-mobile-book-row-template");
+const formTitle = document.querySelector("#first-section .mb-4 .text-4xl");
+const formDescription = document.querySelector("#first-section .mb-4 .text-sm");
 
 function renderBooks(books) {
     booksList.replaceChildren();
@@ -19,4 +21,25 @@ function renderBooks(books) {
     });
 }
 
-export {renderBooks}
+function updateForm(form, book) {
+    formTitle.textContent = "Modifier le livre";
+    formDescription.hidden = true;
+
+    form.elements.namedItem("titre").value = book.title;
+    form.elements.namedItem("autheur").value = book.author;
+    form.elements.namedItem("annee").value = book.year || "";
+    form.elements.namedItem("genre").value = book.genre || "";
+    form.elements.namedItem("statut").value = book.status;
+    form.elements.namedItem("description").value = book.description || "";
+
+    form.querySelector("#ajouter-livre-button").textContent = "Enregistrer les modifications";
+}
+
+function resetForm(form) {
+    form.reset();
+    formTitle.textContent = "Ajouter un livre";
+    formDescription.hidden = false;
+    form.querySelector("#ajouter-livre-button").textContent = "+ Ajouter le livre";
+}
+
+export {renderBooks, updateForm, resetForm};
